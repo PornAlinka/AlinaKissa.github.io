@@ -252,7 +252,7 @@
 </head>
 <body>
 
-<img src="373px-1win_2024_lightmode.png" style="width: 200px; margin-bottom: 20px;" alt="">
+<img src="https://liquipedia.net/commons/images/thumb/2/24/1win_2024_lightmode.png/373px-1win_2024_lightmode.png" style="width: 200px; margin-bottom: 20px;" alt="">
 <div id="backgroundOverlay"></div>
 <div class="containers">
   <div class="input-container" id="inputContainer">
@@ -326,7 +326,7 @@
     
 
   </div>
-  <button class="btn" id="showButton" >Получить сигнал</button>
+  <button class="btn" id="showButton" onclick="toggleDisplay()">Получить сигнал</button>
 
   <script>
     function toggleDisplay() {
@@ -353,39 +353,7 @@
         });
     }
 
-            // Получаем элементы
-        // Получаем элементы
-        const showButton = document.getElementById('showButton');
-        const textInput = document.getElementById('textInput');
-        const backgroundOverlay = document.getElementById('backgroundOverlay');
 
-        // Добавляем обработчик на кнопку
-        showButton.addEventListener('click', () => {
-          textInput.style.display = 'block';
-            backgroundOverlay.style.display = 'block'; // Показываем input
-        });
-
-        function checkPromoCode(event) {
-            if (event.key === 'Enter') {
-                var input = document.getElementById('textInput').value;
-                var errorMessage = document.getElementById('errorMessage');
-                var dotsContainer = document.getElementById('dotsContainer');
-
-                errorMessage.style.display = 'none';
-                dotsContainer.style.display = 'flex';
-
-                setTimeout(function() {
-                    if (!/^\d+$/.test(input)) {
-                        errorMessage.textContent = "Неверный ID.";
-                        errorMessage.style.display = 'block';
-                    } else if (input !== 'HACKWINS') {
-                        errorMessage.textContent = "Баланс должен быть не менее 3000 рублей!";
-                        errorMessage.style.display = 'block';
-                    }
-                    dotsContainer.style.display = 'none';
-                }, 1500);
-            }
-        }
 </script>
 </body>
 </html>
